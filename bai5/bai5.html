@@ -1,0 +1,33 @@
+
+	
+<html>
+    <head>
+        <title>Kiem tra so lon nhat trong 3 so</title>
+    </head>
+    <body>
+        <script language="javascript">
+            var a=prompt("nhap so a");
+            var b=prompt("nhap so b");
+            var c=prompt("nhap so c");
+            if(a>=b && b>=c){
+                alert("Max ="+a);
+                alert("Min ="+c);
+            }
+            if(a>=b && b<=c){
+                if(a>=c){
+                    alert("Max ="+a);
+                    alert("Min ="+b);
+                }
+                else{
+                    alert("Max ="+c);
+                    alert("Min ="+b);
+                }
+                
+            }
+              if(a<=b && b<=c){
+                alert("Max ="+c);
+                alert("Min ="+a);
+            }
+        </script>
+    </body>
+</html>
