@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Index</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <input type="button" value="nhap so tinh min max" onclick="Minmax()"/>
+        <input type="button" value="tinh phuong trinh bac 2" onclick="giai_pt_bac_nhat()"/>
+
+<script>
+function Minmax(){
+    var min;
+    var max;
+    var a=[];
+    var i=0;
+    a[i]=prompt("Nhap so thu"+(i+1));
+    min=a[i];
+    max=a[i];
+    while(a[i]!=null){
+        i++;
+        a[i]=prompt("nhap so thu"+(i+1));
+        if(a[i]!=null){
+            if(a[i]>=max){
+                max=a[i];
+            }
+            if(a[i]<=min){
+                min=a[i];
+            }
+        }
+    }
+    alert("min la"+min);
+    document.write("max la :"+max+"<br>"+"Min la:"+min);
+ }
+ function giai_pt_bac_nhat(){
+    var a;
+    var b;
+    a=prompt("nhap so a");
+    b=prompt("nhap so b");
+    if(a ==0 && b == 0){
+        alert('Phương trình vô số nghiệm');
+    }
+    else if (a != 0 && b == 0){
+        alert('Phương trình có nghiệm x = 0');
+    }
+    else if (a == 0 && b != 0){
+        alert("Phương trình vô nghiệm");
+    }
+    else {
+        alert('Phương trình có nghiệm x = ' + (-b/a));
+    }
+}
+</script>
+    </body>
+</html>

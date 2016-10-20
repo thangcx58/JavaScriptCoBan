@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Lam viec voi Mang</title>
+    </head>
+    <body>
+        <input type="button" value="in mang" onclick="InMang()"/>
+        <script language="javascript">
+        function InMang(){
+            var i;
+            var a=[];
+            for(i=0;i<=3;i++){
+                a[i]=prompt("nhap so:");
+            }
+            document.write(a.join(" "));
+            alert(a.length);
+            //log ko chay?
+            // var t = new Array(1,2,3);
+            console.log(a);
+        }
+        </script>
+    </body>
+</html>

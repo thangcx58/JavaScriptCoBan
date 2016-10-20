@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Lam viec voi DOM</title>
+    </head>
+    <body>
+        UserName :<input type="text" id="userName"/><br>
+        Password :<input type="text" id="passWord" /><br>
+                 <input type="button" value="dang nhap" onclick ="Inten()" />
+        <script language="javascript">
+        function Inten(){
+            var user = document.getElementById('userName');
+            document.write(user.value);
+            document.write("<br>pass:");
+            var pass=document.getElementById('passWord');
+            alert(pass);
+        }
+        </script>
+    </body>
+</html>

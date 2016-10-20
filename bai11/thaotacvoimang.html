@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Thao tac voi Mang</title>
+    </head>
+    <body>
+        <input type="button" value="in mang" onclick="InMang()"/>
+        <input type="button" value="them sua chuoi voi mang" onclick="InChuoi()"/>
+        <script language="javascript">
+        function InMang(){
+            var i;
+            var a=[];
+            for(i=0;i<=3;i++){
+                a[i]=prompt("nhap so:");
+            }
+            a.push("5");
+            a.pop();
+            a.unshift(0);
+            document.write(a.valueOf());
+        }
+        function InChuoi(){
+            var a = Array("chuoi lang nhang");
+            var t = Array("dao","nay","lam","viec","kem","vl");
+            t.splice(4,2,"cung","vui");
+            document.write(t.join(" "));
+            document.write("<br> sort <br>");  
+            t.sort();
+            document.write(t.join(" "));
+            document.write("<br> reverse <br>");
+            t.reverse();  
+            document.write(t.join(" "));
+            var h=a.concat(t);
+            document.write("<br> concat <br>" )
+            document.write(h.join(" "));
+            document.write("<br>lay cac phan tu cua mang tren o vi tri 3 den 6 <br> ");
+            var mang_moi=h.slice(1);
+            document.write(mang_moi.valueOf());
+        }
+        </script>
+    </body>
+</html>

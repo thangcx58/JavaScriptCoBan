@@ -1,0 +1,35 @@
+<html>
+  <body>
+    <script language="javascript">
+    function validate(){
+      var userName=document.getElementById("userName").value;
+      var passWord=document.getElementById("passWord").value;
+      var repassWord=document.getElementById("repassWord").value;
+
+      if(userName==""){
+        alert("Ban chua dien username");
+        return false;
+      }
+      if(passWord==""){
+        alert("Ban chua nhap password");
+        return false;
+      }
+       if(repassWord==""){
+        alert("Ban chua nhap repassword");
+        return false;
+      }
+      if(repassWord != passWord){
+        alert("Mat khau nhap lai khong dung");
+        return false;
+      }
+      return true;
+    }
+    </script>
+    <form method="post" action="">
+          UserName:   <input id="userName" type="text" name="userName"/><br>
+          PassWord:   <input id="passWord" type="text" name="passWord"/><br>
+          Re-PassWord:<input id="repassWord" type="text" name="repassWord"><br>
+          <input type="submit" value="Register" onclick="return validate()" />
+    </form>
+  </body>
+</html>
