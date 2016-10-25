@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RemoveEvent</title>
+</head>
+<body>
+	<input type="button" value="random" id="start_random"/>
+	<input type="button" value=" stop random" id="stop_random"/>
+	<div id="result"></div>
+
+	<script type="text/javascript">
+		var result= document.getElementById("result");
+		var button= document.getElementById("start_random");
+		var button_stop=document.getElementById("stop_random");
+		function do_random(){
+			var randomnumber = Math.random();
+			result.innerHTML = randomnumber;
+		}
+		button.addEventListener("click",do_random);
+		button_stop.addEventListener("click",function(){
+			button.removeEventListener("click",do_random);
+		})
+	</script>
+</body>
+</html>

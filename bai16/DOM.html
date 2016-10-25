@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+		<div id="content">
+			Why i can't learn English ?
+		</div>
+		<input type="button" value="Cause YOu are too lazy" id="get_content" onclick="get_content()"/>
+		<input type="button" value="You need a help" id="get_content" onclick="set_content()"><br>
+		<input type="button" value="convert" onclick="convert()" id="object"/><br>
+		<input type="button" value="attribute" onclick="attribute()" id="object2"/><br>
+	<script type="text/javascript">
+		function set_content(){
+			document.getElementById("content").innerHTML="<p>You can learn on Mr.Hoa</p>";
+		}
+		function get_content(){
+			var html=document.getElementById("content").innerHTML;
+			alert("Content :" +html);
+		}
+		function convert(){
+			var object= document.getElementById("object");
+			var type=object.type;
+			if(type=="button"){
+				object.type="text";
+			}
+			else{
+				object.type="button";
+			}
+		}
+		function attribute(){
+			document.getElementById("object2").setAttribute("value","value2");
+
+		}
+	</script>
+</body>
+</html>

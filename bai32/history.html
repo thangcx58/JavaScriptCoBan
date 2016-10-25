@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function back(){
+		window.history.back();
+	}
+	function forward(){
+		window.history.forward();
+	}
+	function hrefPage(){
+			window.location.href ='http://google.com';
+	}
+	var button=document.getElementById("click",	function(){
+		var click= document.getElementById("click");
+		click.addEventListener('click',function(){
+			document.getElementById("result").innerHTML = "I need to Back";
+		});
+	})
+</script>
+	<button onclick="back()">Back</button>
+	<button onclick="forward()">forward</button>
+	<button onclick="hrefPage()">href</button>
+	<input type="button" value="Click" id="click"/><br>
+	<div id="result"></div>
+</body>
+</html>

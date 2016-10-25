@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Break-Continue</title>
+</head>
+<body>
+	<input type="button" value="Click" id="click"/>
+	<script type="text/javascript">
+		var control=document.getElementById('click');
+		control.addEventListener('click',inso);
+		function inso(){
+			// alert(i);
+			for(var i=1;i<=20;i++){
+				if(i==5){
+					document.write("khong in 5");
+					continue;
+				}
+				alert(i);
+				if(i%11 == 0){
+					document.write("Vong lap dung");
+					break;
+				}
+			}
+		}
+	</script>
+</body>
+</html>

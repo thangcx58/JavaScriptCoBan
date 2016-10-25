@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BOM-location</title>
+</head>
+<body>
+	<button onclick="reloadPage()">Reload</button>
+	<button onclick="replacePage()">Replace</button>
+	<button onclick="hrefPage()">href</button>
+	<button onclick="assignPage()">assign</button>
+	<button onclick="show()">Show</button>
+	<script type="text/javascript">
+		function reloadPage(){
+			window.location.reload();
+		}
+		function replacePage(){
+			window.location.replace('http://google.com');
+		}
+		function hrefPage(){
+			window.location.href ='http://google.com';
+		}
+		function assignPage(){
+			window.location.assign("http://facebook.com");
+		}
+		function show(){
+			document.write("hash :"+ window.location.hash+"<br>");
+			document.write("port :"+ window.location.port+"<br>");
+			document.write("href :"+ window.location.href+"<br>");
+			document.write("search :"+ window.location.search+"<br>");
+		}
+	</script>
+</body>
+</html>

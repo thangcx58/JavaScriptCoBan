@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="content">
+			<h5>It's rainy</h5>
+	</div>
+	<input type="button" value="View" id="btn-view"/>
+	<input type="button" value="say hello" id="insert"/>
+	<input type="button" value="remove hello" id="remove"/>
+	<input type="button" value="replace hello" id="replace"/>
+	<script type="text/javascript">
+		// var p=document.createElement("p");
+		// p.innerHTML ="Hoc DOM NODES";
+		 // document.getElementsByTagName('body')[0].appendChild(p);
+		 // appendChild
+		 var button = document.getElementById("btn-view");
+		 button.addEventListener("click",function(){
+		 	var h1= document.createElement("h1");
+		 	h1.innerHTML="and I'm listening a favourite song";
+		 	document.getElementById('content').appendChild(h1);
+			});
+		 //insertBefore()
+		 var button1= document.getElementById("insert");
+		 button1.addEventListener("click", function(){
+            var h1 = document.createElement("h1");
+            h1.innerHTML = "hello, Fuji"
+            var element = document.getElementById("content")      
+            var element_child = document.getElementsByTagName("h5")[1];
+            element.insertBefore(h1, element_child);
+          });
+		 //remove()
+		 var button2 =document.getElementById("remove");
+		 button2.addEventListener('click',function(){
+		 	var need_remove = document.getElementsByTagName("h1")[0];
+		 	document.getElementById("content").removeChild(need_remove);
+		 });
+		 //replace()
+		 var button3=document.getElementById("replace");
+		 button3.addEventListener("click",function(){
+		 	var  replace =document.getElementsByTagName("h1")[0];
+		 	var rep=document.createElement("h1");
+		 	rep.innerHTML="I miss You";
+		 	document.getElementById("content").replaceChild(rep,replace);
+		 });
+	</script>
+</body>
+</html>

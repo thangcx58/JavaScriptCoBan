@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom CSS</title>
+</head>
+<body>
+	UserName:<input type="text" id="userName" /><br>
+	PassWord:<input type="text" id="passWord"/>
+	<br><div id ="message"></div>
+	<input type="button" value="login" onclick="validate()">
+	<script type="text/javascript">
+		function validate(){
+			var userName=document.getElementById("userName").value;
+			var passWord=document.getElementById("passWord").value;
+			var message=document.getElementById("message");
+			if (userName == "" || passWord == ""){
+                message.innerHTML = "You need to complete form";
+                message.style.color = "red";
+            }
+             
+            else{
+                message.innerHTML = "Congratulation !";
+                message.style.color = "blue";
+            }
+		}
+	</script>
+</body>
+</html>

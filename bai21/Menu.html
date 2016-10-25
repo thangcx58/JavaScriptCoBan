@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu-dropdown</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<ul id="dropdown">
+    <li><a href="#">Breaking News</a></li>
+    <li>
+        <a href="#">Tech</a>
+        <ul>
+            <li><a href="#">Smart Phone</a></li>
+            <li><a href="#">Cyber Security</a></li>
+            <li><a href="#">innovation Nation</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Entertaiment</a>
+        <ul>
+            <li><a href="#">Tv+Web</a></li>
+            <li><a href="#">Movies+Music</a></li>
+            <li><a href="#">Celebrity Watch</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Sport</a>
+        <ul>
+            <li><a href="#">Football news</a></li>
+            <li><a href="#">Sport news</a></li>
+        </ul>
+    </li>
+</ul>
+<script type="text/javascript">
+	var menu =document.querySelectorAll('#dropdown > li');
+	for(var i= 0; i<menu.length;i++){
+		menu[i].addEventListener("click",function(){
+			var menuList = document.querySelectorAll('#dropdown > li > ul');
+			for(var j=0;j< menuList.length;j++){
+				menuList[j].style.display ="none";
+			}
+			this.children[1].style.display="block";
+		});
+	}
+</script>
+
+</body>
+</html>

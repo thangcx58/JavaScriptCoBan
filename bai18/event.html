@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>event</title>
+</head>
+<body>
+	<ul>
+		<li><a href="#" class="show">Tech</a></li>
+		<li><a href="#" class="show">Politic</a></li>
+		<li><a href="#" class="show">Entertaiment</a></li>
+	</ul>
+	<script type="text/javascript">
+		var a_list = document.getElementsByClassName("show");
+		for(var i=0;i< a_list.length;i++){
+			a_list[i].onclick=function()
+			{
+				alert("ban dang doc tin tuc");
+			}
+		}
+	</script>
+</body>
+</html>
