@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Students manager</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		var Student={
+			data :[],
+			viewStudent: function(){
+				var listStudent= this.data;
+				for(var i=0;i< listStudent.length;i++){
+					 document.write("<div>" + listStudent[i].id + "|" + listStudent[i].name + "|" + listStudent[i].email + "</div>"+
+					 	"<button onclick="delete()"> Delete</button>"
+					 	);
+				}
+			},
+			addStudent: function(id,name,email){
+				var item = {
+           			 id : id,
+           			 name : name,
+            		email : email
+        			};
+        		this.data.push(item);
+			},
+			removeStudent: function(id){
+				for(var i=0 ; i<this.data.length;i++){
+					if(this.data[i].id==id){
+						this.data.splice(i,1);
+					}
+				}
+			},
+			editStudent: function(id,name,email){
+
+			}
+		}
+		function send(el1,el2,el3){
+			var ID=document.getElementById(el1).value;
+			var Name=document.getElementById(el2).value;
+			var Email=document.getElementById(el3).value;
+			Student.addStudent(ID,Name,Email);
+		}
+		function view(){
+			Student.viewStudent();
+		}
+		function delete(id){
+
+		}
+	</script>
+</head>
+<body>
+	<p>Student Manager</p>
+	Id:<input type="text" id="ID" /><br>
+	Name:<input type="text" id="Name"/><br>
+	Email:<input type="text" id="Email"/><br>
+	<button id ="send" onclick="send('ID','Name','Email')">Send</button><br>
+	<button onclick="view()">show studentlist</button>
+	<div id="demo"></div>
+</body>
+</html>

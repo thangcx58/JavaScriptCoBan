@@ -1,0 +1,44 @@
+<html>
+<body>
+
+<p>Click the button to replace "world" with "Thang" in the paragraph below:</p>
+
+<p id="demo1">Hello world !</p>
+
+<button onclick="repl()">Try it</button>
+
+<p>to UpperCase() and LowerCase()<p>
+<p id="demo2">Hello world !</p>
+
+<button onclick="UpperCase()">Uppercase</button>
+<button onclick="LowerCase()">Lowercase</button>
+<p>How are you doing today?</p>
+<button onclick="spl()">SPLIT() and try it</button>
+<p id="demo3"></p>
+
+
+<script>
+function repl() {
+    var str = document.getElementById("demo1").innerHTML; 
+    var res = str.replace("world", "Thang");
+    document.getElementById("demo1").innerHTML = res;
+}
+function UpperCase(){
+	var str = document.getElementById("demo2").innerHTML;
+	var res1 = str.toUpperCase();
+	document.getElementById("demo2").innerHTML = res1;
+}
+function LowerCase(){
+	var str = document.getElementById("demo2").innerHTML;
+	var res2 = str.toLowerCase();
+	document.getElementById("demo2").innerHTML = res2;
+}
+function spl(){
+	var str="How are you doing today?";
+	var res=str.split(" ");
+	document.getElementById("demo3").innerHTML = res;
+}
+</script>
+
+</body>
+</html>

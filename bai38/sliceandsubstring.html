@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display the extracted part of the string:"Hello world"</p>
+
+<button onclick="slice()">Try it</button>
+
+<p id="demo1"></p>
+<p>Click the button to display the extracted part of the string:"Hello world" and returns a new string</p>
+
+<button onclick="subs()">Try it</button>
+
+<p id="demo2"></p>
+
+<script>
+function slice() {
+    var str = "Hello world!"; 
+    var res = str.slice(1, 5);
+    document.getElementById("demo1").innerHTML = res;
+}
+function subs(){
+	var str = "Hello world!"; 
+	var  res=str.slice(0,5);
+	document.getElementById("demo2").innerHTML = res;
+}
+</script>
+
+</body>
+</html>

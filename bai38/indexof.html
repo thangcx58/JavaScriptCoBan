@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Indexof() and LastIndefof()</title>
+</head>
+<body>
+	<p>Hello world, welcome to the universe</p>
+	<p>Click the button. It will show indexOf() the string</p>
+	<button onclick="indexOf()">Try it</button>
+	<p id="demo"></p><br>
+	<p>Click the button. It will show lastIndexOf() the string</p><br>
+	<button onclick="LastindexOf()">Try it</button><br>
+	<p id="demo1"></p>
+<script>
+function indexOf() {
+    var str = "Hello world, welcome to the universe.";
+    var n = str.indexOf("welcome");
+    document.getElementById("demo").innerHTML = n;
+}
+function LastindexOf(){
+	var str="Hello world, welcome to the universe.";
+	var n= str.lastIndexOf("universe");
+	document.getElementById("demo1").innerHTML = n;
+}
+</script>
+</body>
+</html>

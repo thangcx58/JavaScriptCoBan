@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Number</title>
+</head>
+<body>
+	<p>Convert string: "123abc" to int</p>
+	<button onclick="par_Int()">Try it</button>
+	<p id="demo1"></p>
+
+	<p>Convert string: "12.3abc" to float</p>
+	<button onclick="par_Float()">Try it</button>
+	<p id="demo2"></p>
+
+	<p>Convert a number to string</p>
+	<button onclick="to_String()">Try it</button>
+	<p id="demo3"></p>
+
+	<p>Formats a number with x numbers of digits after the decimal point</p>
+	<button onclick="to_Fixed()">Try it</button>
+	<p id="demo4"></p>
+
+	<p>Formats a number to x length</p>
+	<button onclick="to_Preci()">Try it</button>
+	<p id="demo5"></p>
+
+	<p>Returns the primitive value of a number</p>
+	<button onclick="value_OF()">Try it</button>
+	<p id="demo6"></p>
+
+	<script type="text/javascript">
+		function par_Int(){
+			var a="123abc";
+			var b=parseInt(a);
+			document.getElementById("demo1").innerHTML=b;
+		}
+		function par_Float(){
+			var a="12.3 abc";
+			var b=parseInt(a);
+			document.getElementById("demo2").innerHTML=b;
+		}
+		function to_String(){
+			var a=23;
+			var b=a.toString();
+			document.getElementById("demo3").innerHTML=b;
+		}
+		function to_Fixed(){
+			var x=5.3423;
+			x.toFixed(2);
+			document.getElementById("demo4").innerHTML=x;
+		}
+		function to_Preci(){
+			var x=5.3423;
+			x.toPrecision(3);
+			document.getElementById("demo5").innerHTML=x;
+		}
+		function value_OF(){
+			var x= 124+12;
+			x.valueOf();
+			document.getElementById("demo6").innerHTML=x;
+		}
+	</script>
+</body>
+</html>
